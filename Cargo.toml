@@ -1,0 +1,26 @@
+[package]
+name = "test-exe-a"
+version = "0.1.0"
+authors = ["Douman <douman@gmx.se>"]
+
+[dependencies]
+futures = "*"
+tokio-core = "*"
+tokio-io = "*"
+tokio-proto = "*"
+tokio-service = "*"
+bytes = "*"
+rand = "*"
+byteorder = "*"
+
+[lib]
+path = "src/lib.rs"
+name = "protocol"
+
+[[bin]]
+path = "src/server/main.rs"
+name = "server"
+
+[[bin]]
+path = "src/client/main.rs"
+name = "client"
